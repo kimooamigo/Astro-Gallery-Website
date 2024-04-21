@@ -1,0 +1,74 @@
+---
+import '@fontsource-variable/league-spartan'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+export interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="grid gap-[10px] p-5">
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: 'League Spartan Variable', sans-serif;
+		background-color: #ffffff;
+	}
+
+	.title {
+		animation-duration: 0.5s;
+		animation-name: fadein;
+		animation-timing-function: ease-out;
+		transition: opacity 250ms ease-in;
+	}
+
+	.fadeIn {
+		animation-duration: 300ms;
+		animation-name: fadein;
+		animation-timing-function: ease-out;
+		transition: all 300ms ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fadein {
+		0% {
+			opacity: 0;
+			transform: translate(0rem, 2.5rem);
+		}
+		50% {
+			opacity: 0.4;
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(0rem, 0rem);
+		}
+	}
+
+	@media (min-width: 768px) {
+		.par > img:last-child {
+			grid-column: 5 / 9;
+		}
+
+		.inpar > img:first-child {
+			grid-column: 1 / 4;
+		}
+	}
+</style>
