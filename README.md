@@ -21,13 +21,19 @@
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss).
 - [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
 
-1. Clone or [fork](https://github.com/danielcgilibert/OpenLink/fork) the repository:
+1. Clone or [fork](https://github.com/kimooamigo/GalleryPhoto-Website/fork) the repository:
 
 ```bash
-git@github.com:danielcgilibert/minimal-photography.git
+git@github.com:kimooamigo/GalleryPhoto-Website.git
 ```
 
-2. Install dependencies:
+2. Select Directory Path 
+
+```bash
+cd GalleryPhoto-Website
+```
+
+3. Install dependencies:
 
 ```bash
 npm install
@@ -37,7 +43,7 @@ yarn install
 pnpm install
 ```
 
-3. Run the development server:
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -50,3 +56,4 @@ pnpm dev
 ## ☁ Deploys
 
 - [Vercel](https://vercel.com/)
+
